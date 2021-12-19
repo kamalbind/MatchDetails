@@ -13,7 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.widget.Toast;
 
-import com.company.matchdetails.ui.main.SectionsPagerAdapter;
+import com.company.matchdetails.ui.adapter.SectionsPagerAdapter;
 
 public class MainActivity extends AppCompatActivity {
 

@@ -1,14 +1,11 @@
-package com.company.matchdetails.ui.main;
-
-import android.content.Context;
+package com.company.matchdetails.ui.adapter;
 
 import androidx.annotation.Nullable;
-import androidx.annotation.StringRes;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
-import com.company.matchdetails.R;
+import com.company.matchdetails.ui.fragment.TeamPlayersFragment;
 
 /**
  * A [FragmentPagerAdapter] that returns a fragment corresponding to

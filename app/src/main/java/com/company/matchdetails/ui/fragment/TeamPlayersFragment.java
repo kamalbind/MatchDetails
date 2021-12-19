@@ -1,4 +1,4 @@
-package com.company.matchdetails.ui.main;
+package com.company.matchdetails.ui.fragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.company.matchdetails.R;
-import com.company.matchdetails.ui.recyclerview.PlayerRecyclerAdapter;
+import com.company.matchdetails.ui.adapter.PlayerRecyclerAdapter;
 import com.company.matchdetails.viewmodel.MatchViewModel;
 
 /**
