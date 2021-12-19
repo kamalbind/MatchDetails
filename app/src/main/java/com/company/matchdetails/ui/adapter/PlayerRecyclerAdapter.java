@@ -9,19 +9,16 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.company.matchdetails.R;
+import com.company.matchdetails.model.Player;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class PlayerRecyclerAdapter extends RecyclerView.Adapter<PlayerRecyclerAdapter.PlayerViewHolder> {
 
-    private final List<String> playerList = new ArrayList<>();
+    private final List<Player> playerList = new ArrayList<>();
 
-    public PlayerRecyclerAdapter() {
-
-    }
-
-    public void updatePlayer(List<String> players) {
+    public void updatePlayer(List<Player> players) {
         playerList.addAll(players);
         notifyDataSetChanged();
     }
@@ -35,7 +32,15 @@ public class PlayerRecyclerAdapter extends RecyclerView.Adapter<PlayerRecyclerAd
 
     @Override
     public void onBindViewHolder(@NonNull PlayerViewHolder holder, int position) {
-        holder.getPlayerNameTextView().setText(playerList.get(position));
+        Player player = playerList.get(position);
+        StringBuilder name = new StringBuilder(player.name_Full);
+        if (player.iscaptain) {
+            name.append(" (c)");
+        }
+        if (player.iskeeper) {
+            name.append(" (wk)");
+        }
+        holder.getPlayerNameTextView().setText(name);
     }
 
     @Override
