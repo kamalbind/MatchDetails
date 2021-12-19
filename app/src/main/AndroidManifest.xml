@@ -14,7 +14,7 @@
         android:theme="@style/Theme.MatchDetails">
 
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.activity.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/Theme.MatchDetails.NoActionBar">
             <intent-filter>

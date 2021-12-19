@@ -16,31 +16,27 @@ import com.company.matchdetails.R;
  */
 public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
-    @StringRes
-    private static final int[] TAB_TITLES = new int[]{R.string.tab_text_1, R.string.tab_text_2};
-    private final Context mContext;
+    private final String[] TAB_TITLES = new String[2];
 
-    public SectionsPagerAdapter(Context context, FragmentManager fm) {
+    public SectionsPagerAdapter(FragmentManager fm, String team1, String team2) {
         super(fm);
-        mContext = context;
+        TAB_TITLES[0] = team1;
+        TAB_TITLES[1] = team2;
     }
 
     @Override
     public Fragment getItem(int position) {
-        // getItem is called to instantiate the fragment for the given page.
-        // Return a PlaceholderFragment (defined as a static inner class below).
-        return PlaceholderFragment.newInstance(position + 1);
+        return TeamPlayersFragment.newInstance(position + 1);
     }
 
     @Nullable
     @Override
     public CharSequence getPageTitle(int position) {
-        return mContext.getResources().getString(TAB_TITLES[position]);
+        return TAB_TITLES[position];
     }
 
     @Override
     public int getCount() {
-        // Show 3 total pages.
         return TAB_TITLES.length;
     }
 }
